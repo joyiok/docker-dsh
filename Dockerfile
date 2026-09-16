@@ -11,8 +11,12 @@ COPY public.cordis.patch.yml /app/public.cordis.patch.yml
 USER node
 WORKDIR /workspace
 
+ARG PORT=8080
+ARG PUBLIC_HOST
+
 ENV DSH_HOME=/home/node/.dsh
-ENV PORT=8080
+ENV PORT=${PORT}
+ENV PUBLIC_HOST=${PUBLIC_HOST}
 
 EXPOSE 8080
 
