@@ -1,6 +1,9 @@
 services:
   dsh:
-    build: .
+    build:
+      context: .
+      args:
+        PUBLIC_HOST: ${PUBLIC_HOST:-localhost:8080}
     restart: unless-stopped
     ports:
       - "${PORT:-8080}:${PORT:-8080}"

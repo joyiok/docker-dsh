@@ -36,6 +36,9 @@ https://harness.example.com/?token=日志中的token
 平台必须提供 HTTPS。建议再启用平台的登录保护或访问白名单；DeepSeek Harness 仍处于
 开发者预览阶段，并能读写挂载的工作区、执行命令。
 
+镜像会仅为 `PUBLIC_HOST` 启用远程设置页面。该补丁扩大了公网控制面，因此 HTTPS、
+token 保密和平台访问控制都是必需的。
+
 ## 停止
 
 ```bash
